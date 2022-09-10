@@ -1,20 +1,18 @@
 
 
 const LAMPAK=[];
-window.addEventListener("load", function(){
-    $("input[type=range]").val(4);
-    general($("input[type=range]").val(4));
-    $("input[type=range]").on("change",function(){
-        let meret =$("input[type=range]").val();
-        general(meret);
-        $("label[for=vol]").html(meret);
-    });
-    
-    console.log(LAMPAK);
-});
+
 
 $(() => {
-    loadLamp(9)
+    loadLamp(4);
+    $("input[type=range]").val(4);
+    $("label[for=vol]").html(4);
+    $("input[type=range]").on("change",function(){
+        let meret =$("input[type=range]").val();
+        loadLamp(meret);
+        $("label[for=vol]").html(meret);
+    });
+
     lampAction()
 })
 
