@@ -1,3 +1,4 @@
+
 const LAMPAK=[];
 window.addEventListener("load", function(){
     general(9);
@@ -15,8 +16,7 @@ function general(hany){
 }
 
 function bovithetoseg(){
-    $("")
+    $("");
 }
 function valami(){
-
 }
