@@ -1,4 +1,3 @@
-
 $(() => {
     loadLamp(9)
     lampAction()
