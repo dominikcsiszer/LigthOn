@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+main {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .container {
     max-width: 800px;
     width: 100%;
@@ -23,4 +29,8 @@
 
 .active {
     background-color: greenyellow;
+}
+
+#vol {
+    margin: 20px;
 }

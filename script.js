@@ -3,6 +3,18 @@ $(() => {
 })
 
 let LAMPAK = []
+
+$(() => {
+    let meret =$("input[type=range]").val();
+    loadLamp(meret);
+    $("label[for=vol]").html(meret);
+    $("input[type=range]").on("change",function(){
+        loadLamp(meret);
+        $("label[for=vol]").html(meret);
+        lampAction();
+    });
+})
+
 function loadLamp(n) {
     LAMPAK = []
     html ="";
