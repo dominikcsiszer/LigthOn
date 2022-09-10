@@ -1,4 +1,5 @@
 
+
 const LAMPAK=[];
 window.addEventListener("load", function(){
     $("input[type=range]").val(4);
@@ -12,13 +13,24 @@ window.addEventListener("load", function(){
     console.log(LAMPAK);
 });
 
-function general(hany){
+$(() => {
+    loadLamp(9)
+    lampAction()
+})
+
+
+function loadLamp(n) {
     html ="";
-    for (let index = 0; index < hany; index++) {
+    for (let index = 0; index < n; index++) {
         html+="<div id='"+index+"' class='lampa'></div>";
-        
     }
     $(".container").html(html);
     LAMPAK.push($(".lampa"));
+}
+
+function lampAction() {
+    $(".lampa").on("click", function(){
+        $(this).toggleClass("active")
+    })
 }
 
