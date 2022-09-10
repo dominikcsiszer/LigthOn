@@ -1,7 +1,14 @@
 
 const LAMPAK=[];
 window.addEventListener("load", function(){
-    general(9);
+    $("input[type=range]").val(4);
+    general($("input[type=range]").val(4));
+    $("input[type=range]").on("change",function(){
+        let meret =$("input[type=range]").val();
+        general(meret);
+        $("label[for=vol]").html(meret);
+    });
+    
     console.log(LAMPAK);
 });
 
@@ -15,8 +22,3 @@ function general(hany){
     LAMPAK.push($(".lampa"));
 }
 
-function bovithetoseg(){
-    $("");
-}
-function valami(){
-}
