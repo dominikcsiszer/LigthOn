@@ -1,23 +1,21 @@
+
 $(() => {
     loadLamp(9)
     lampAction()
 })
 
-
 const LAMPAK = []
 function loadLamp(n) {
-
+    html ="";
+    for (let index = 0; index < n; index++) {
+        html+="<div id='"+index+"' class='lampa'></div>";
+    }
+    $(".container").html(html);
+    LAMPAK.push($(".lampa"));
 }
 
 function lampAction() {
-    LAMPAK.forEach(element => {
-        element.on("click", () =>{
-            console.log(this)
-        })
+    $(".lampa").on("click", function(){
+        $(this).toggleClass("active")
     })
-
-    // $(".lampa").on("click", () => {
-    //     console.log(this)
-    //     $(this).toggleClass("active")
-    // })
 }
