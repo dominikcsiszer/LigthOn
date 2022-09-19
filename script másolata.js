@@ -1,7 +1,3 @@
-$(() => {
-    loadLamp($("input[type=range]").val())
-})
-
 let LAMPAK = []
 
 $(() => {
@@ -16,6 +12,7 @@ $(() => {
 })
 
 function loadLamp(n) {
+    $("label[for=vol]").html(n);
     LAMPAK = []
     html ="";
     for (let index = 0; index < n; index++) {
